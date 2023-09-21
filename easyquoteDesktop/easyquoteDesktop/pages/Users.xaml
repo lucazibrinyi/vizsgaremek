@@ -1,0 +1,264 @@
+﻿<Page x:Class="easyquoteDesktop.pages.Users"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:easyquoteDesktop.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Background="White"
+      >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="900"/>
+            <ColumnDefinition Width="400" />
+        </Grid.ColumnDefinitions>
+        <Border 
+            Margin="20,20,10,20"
+            Grid.Row="0"
+            Grid.Column="0"
+            Background="#f0f0f0"
+            >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition MaxHeight="1000"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Margin="20,10,0,0"
+                    Content="Keresés: "
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    />
+                <TextBox 
+                    x:Name="txt_search"
+                    Margin="0,15,20,0"
+                    FontSize="20"
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                    TextChanged="SearchTextChanged"
+                    TextWrapping="Wrap"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    />
+                <DataGrid                    
+                    x:Name="usersDataGrid"                  
+                    Margin="20"
+                    Grid.Row="1"
+                    FontSize="18"
+                    IsReadOnly="True"
+                    d:ItemsSource="{d:SampleData ItemCount=26}"
+                    Grid.ColumnSpan="2"
+                    UseLayoutRounding="False"
+                    AutoGenerateColumns="False"
+                    MouseDoubleClick="DataGridDoubleClick"
+                    VerticalGridLinesBrush="Gray"
+                    HorizontalGridLinesBrush="Gray"
+                    AlternatingRowBackground="LightBlue"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Név" Binding="{Binding name}"/>
+                        <DataGridTextColumn Header="E-mail" Binding="{Binding email}"/>
+                        <DataGridTextColumn Header="Dolgozó" Binding="{Binding employee}"/>
+                        <DataGridTextColumn Header="Létrehozva" Binding="{Binding created_at}"/>
+                        <DataGridTextColumn Header="Módosítva" Binding="{Binding updated_at}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+        <Border 
+            Margin="10,20,20,20"
+            Background="#f0f0f0"
+            Grid.Column="1"
+            >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Margin="10,0,0,0"
+                    Content="Név: "
+                    FontSize="20"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    />
+                <TextBox 
+                    x:Name="textbox_name"
+                    FontSize="20"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    TextWrapping="Wrap"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    />
+                <Label 
+                    Margin="10,0,0,0"
+                    Content="E-mail: "
+                    FontSize="20"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    />
+                <TextBox 
+                    x:Name="textbox_email"
+                    FontSize="20"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    TextWrapping="Wrap"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    />
+                <Label 
+                    Margin="10,0,0,0"
+                    Content="Dolgozó: "
+                    FontSize="20"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    />
+                <ComboBox 
+                    x:Name="combobox_employee"
+                    FontSize="20"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    />
+                <Label 
+                    Margin="10,0,0,0"
+                    Content="Felhaszn. ID: "
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    />
+                <ComboBox 
+                    x:Name="combobox_id"
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    />
+                <Label 
+                    x:Name="label_newPassword"
+                    Margin="10,0,0,0"
+                    Content="Új jelszó: "
+                    FontSize="20"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    />
+                <PasswordBox 
+                    x:Name="passwordbox_password"
+                    FontSize="20"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    />
+                <Label 
+                    x:Name="label_newPasswordRepeat"
+                    Margin="10,0,0,0"
+                    Content="Jelszó ism.: "
+                    FontSize="20"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    />
+                <PasswordBox 
+                    x:Name="passwordbox_passwordRepeat"
+                    FontSize="20"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    />
+
+
+
+                <Button 
+                    x:Name="update_button"
+                    Click="UpdateButton"
+                    Width="150"
+                    Height="35"
+                    Content="Frissítés"
+                    FontSize="20"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    />
+                <Button 
+                    x:Name="clear_button"
+                    Click="ClearButton"
+                    Width="150"                           
+                    Height="35"
+                    Content="Kiürítés"
+                    FontSize="20"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    />
+                <Button 
+                    x:Name="delete_button"
+                    Click="DeleteButton"
+                    Width="150"
+                    Height="35"
+                    Content="Törlés"
+                    FontSize="20"
+                    Grid.Row="8" 
+                    Grid.Column="1"
+                    Background="Red"
+                    Foreground="White"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    />
+                <Button 
+                    x:Name="addNewUser_button"
+                    Click="AddNewUSerButton"
+                    Width="150"
+                    Height="36"
+                    Content="Új felhasználó"
+                    FontSize="20"
+                    Grid.Row="9" 
+                    Grid.Column="1"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center" Margin="0,0,0,12"
+                    />
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

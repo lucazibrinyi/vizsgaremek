@@ -1,0 +1,535 @@
+/*-- NavBar --*/
+
+#brand {
+    font-family: 'Rosario', sans-serif;
+    font-size: 30px;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 2px 9px 2px 9px;
+}
+
+#navbar {
+    min-height: 100px;
+    border-bottom: 1px solid rgb(172, 0, 0);
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 5px 20px;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.navright {
+    margin-left: auto;
+}
+
+.navright .nav-link:hover {
+    color: red;
+}
+
+.nav-icon {
+    font-size: 30px;
+}
+
+.nav-icon-plus {
+    font-size: 41px;
+}
+
+
+/*-- Bar, Main --*/
+
+#bar {
+    height: 50px;
+}
+
+.main {
+    min-height: 600px;
+}
+
+
+/*-- Login/SignUp/NewOrder Forms --*/
+
+.login-signup-form,
+.new-order-form {
+    font-size: 17px;
+    line-height: 220%;
+}
+
+.login-signup-form input,
+.new-order-form input {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.login-signup-form h1,
+.new-order-form h1 {
+    color: #575757;
+}
+
+.login-signup-form button,
+.new-order-form button {
+    border: solid;
+    border-radius: 4px;
+    color: white;
+    border-color: red;
+    background-color: red;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 16px 0 16px;
+}
+
+.login-signup-form button:hover,
+.new-order-form button:hover {
+    background-color: rgb(172, 0, 0);
+    border-color: rgb(172, 0, 0);
+}
+
+.login-signup-form a {
+    color: red;
+    text-decoration: none
+}
+
+.login-signup-form a:hover {
+    color: rgb(172, 0, 0);
+}
+
+
+/*-- Search --*/
+
+.select-order {
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar label {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.select-order label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search-bar select,
+.select-order select {
+    font-size: 20px;
+    width: 200px;
+    height: 31px;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    font-size: 20px;
+    width: 200px;
+    height: 31px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    font-size: 16px;
+    color: white;
+    transform: translateY(-4px);
+}
+
+
+/*-- Cards of products --*/
+
+.card {
+    border-radius: 0 !important;
+    padding: 0 15px;
+}
+
+.card:hover {
+    background-color: rgba(189, 189, 189, 0.3);
+}
+
+.card-body {
+    padding: 0px !important;
+}
+
+.card img {
+    padding-top: 10px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.card input {
+    width: 100%;
+}
+
+.card .add {
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.card-title {
+    min-height: 60px;
+}
+
+.description {
+    font-size: 14px;
+    min-height: 80px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card .details {
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+
+/*-- Product --*/
+
+.product {
+    font-size: 19px;
+    color: rgb(97, 96, 96);
+}
+
+
+/*-- Ordered Product List --*/
+
+.orderedProductList a {
+    color: rgb(97, 96, 96);
+}
+
+.orderedProductList a:hover {
+    color: red;
+}
+
+.orderedProductList h1 {
+    color: rgb(97, 96, 96);
+}
+
+.orderedProductList .right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-icon {
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.bx-x-circle {
+    color: red;
+}
+
+.bx-x-circle:hover {
+    color: rgb(172, 0, 0);
+}
+
+
+/*-- Welcome --*/
+
+#welcome {
+    color: rgb(97, 96, 96);
+}
+
+#welcome p {
+    font-size: 17px;
+    line-height: 150%;
+    padding: 30px 10px 30px 10px;
+    color: grey;
+}
+
+#welcome span {
+    font-family: 'Rosario', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.welcome-icons {
+    font-size: 50px;
+    color: red;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+#quote {
+    color: red;
+    text-decoration: none;
+}
+
+#quote:hover {
+    color: rgb(172, 0, 0);
+}
+
+#quote-get {
+    text-align: center;
+}
+
+#quote-get a {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    border: solid;
+    border-radius: 4px;
+    padding: 10px 16px 10px 16px;
+    color: white;
+    border-color: red;
+    background-color: red;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#quote-get a:hover {
+    background-color: rgb(172, 0, 0);
+    border-color: rgb(172, 0, 0);
+}
+
+
+/*-- Orders --*/
+
+.orders,
+.orders a {
+    color: rgb(97, 96, 96);
+}
+
+.orders a:hover {
+    color: red;
+}
+
+.orders-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#get-new-quote-btn {
+    margin-left: auto;
+    text-decoration: none;
+    border: solid;
+    border-radius: 4px;
+    padding: 10px 16px 10px 16px;
+    color: white;
+    border-color: red;
+    background-color: red;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#get-new-quote-btn:hover {
+    background-color: rgb(172, 0, 0);
+    border-color: rgb(172, 0, 0);
+}
+
+.table {
+    margin-top: 10px;
+}
+
+
+/*-- HowTo --*/
+
+#how-to {
+    color: rgb(97, 96, 96);
+    font-size: 20px;
+}
+
+#how-to h2 {
+    line-height: 250%;
+}
+
+#how-to a {
+    color: red;
+    text-decoration: none;
+}
+
+#how-to a:hover {
+    color: rgb(172, 0, 0);
+}
+
+#how-to li {
+    list-style-type: square;
+    line-height: 250%;
+}
+
+
+/*-- NotFound --*/
+
+.notfound {
+    text-align: center;
+}
+
+.notfound a {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    border: solid;
+    border-radius: 4px;
+    padding: 10px 16px 10px 16px;
+    color: white;
+    border-color: red;
+    background-color: red;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.notfound a:hover {
+    background-color: rgb(172, 0, 0);
+    border-color: rgb(172, 0, 0);
+}
+
+
+/*-- Notification --*/
+
+.notification {
+    position: fixed;
+    font-weight: bold;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 10;
+    padding: 1rem 1.5rem;
+    background-color: red;
+    border-radius: 4px;
+    color: white;
+}
+
+
+/*-- Footer --*/
+
+#footer {
+    border-top: rgb(172, 0, 0) 1px solid;
+    margin: 40px 0 0 0;
+    padding: 30px 0 0 0;
+    background-color: #fafafa;
+}
+
+#brand-name {
+    padding-bottom: 8px;
+}
+
+#footer p {
+    line-height: 80%;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: rgb(97, 96, 96);
+    line-height: 180%;
+}
+
+.footer-links a:hover {
+    color: red;
+}
+
+.footer-links i,
+.footer-links a {
+    display: block;
+}
+
+.flex-container-footer {
+    display: flex;
+    align-items: center;
+}
+
+
+/*-- Responsive settings --*/
+
+@media (max-width: 991px) {
+
+    /*-- Navbar --*/
+
+    .navright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /*-- Cards --*/
+
+    .card {
+        align-items: center;
+    }
+
+    .card img {
+        width: 50%;
+        align-items: center;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 25vw;
+        object-fit: cover;
+    }
+
+
+    /*-- Footer --*/
+
+    #footer {
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 30px 0;
+    }
+
+
+    /*-- Login/SignUp Forms  --*/
+
+    .login-signup-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .card {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /*-- Search bar --*/
+
+    .search-bar {
+        width: 25%;
+    }
+
+    .search-bar button {
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width: 575px) {
+    .card {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    /*-- Search bar --*/
+
+    .search-bar select,
+    .select-order select {
+        font-size: 14px;
+    }
+}
